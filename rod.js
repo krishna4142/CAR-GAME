@@ -6,7 +6,10 @@ let car5=document.querySelector(".car5");
 let car6=document.querySelector(".car6");
 let car7=document.querySelector(".car7");
 
-let body1=document.querySelector(".body")
+let body1=document.querySelector(".body");
+
+let mobile=document.querySelector(".mobile");
+
 car2.style.left='-50px'
 car3.style.left='-20px'
 car4.style.right='-5px'
@@ -93,7 +96,8 @@ let clearInterval
 
                 if(((ecar1_left<mycar_left&&mycar_left<ecar1_right) || (ecar1_left<mycar_right && mycar_right<ecar1_right))&&((ecar1_top<mycar_top&&mycar_top<ecar1_bottom)||(ecar1_top<mycar_bottom&&mycar_bottom<ecar1_bottom))){
                     alert("game over");
-                    // clearInterval(ti)
+                    clearInterval(ti)
+                    body.classList.remove("one");
                 }
                 if(((ecar2_left<mycar_left&&mycar_left<ecar2_right) || (ecar2_left<mycar_right && mycar_right<ecar2_right))&&((ecar2_top<mycar_top&&mycar_top<ecar2_bottom)||(ecar2_top<mycar_bottom&&mycar_bottom<ecar2_bottom))){
                     alert("game over");
@@ -117,12 +121,12 @@ let clearInterval
             function start(){
             body.classList.add("one");
 
-            car2.style.animation='sai 5s infinite';
+            car2.style.animation='sai 9s infinite';
             car3.style.animation='sai 7s infinite linear'
-            car4.style.animation='sai 4s infinite linear'
-            car5.style.animation='sai 5s infinite linear'
-            car6.style.animation='sai 7s infinite linear'
-            car7.style.animation='sai 6s infinite linear'
+            car4.style.animation='sai 3s infinite linear'
+            car5.style.animation='sai 11s infinite linear'
+            car6.style.animation='sai 4s infinite linear'
+            car7.style.animation='sai 10s infinite linear'
              
             let game=document.querySelector('.game')
             game.style.animation=' road 3s infinite linear'
@@ -146,6 +150,22 @@ let clearInterval
                 // car2.style.left=`${value*100}px`
                 console.log(value)
             }
+
+             
             
+        }
+        setTimeout(timeout,3000);
+        function timeout(){
+            let a= document.querySelector(".alert");
+            a.style.display="none";
+            // function stare_mobile(){
+            //     let start_btn=document.querySelector(".start_btn");
+            //     start_btn.style.display="none"
+            // }
+        }
+        function startmobile(){
+            let start_btn=document.querySelector(".startmobile");
+            mobile.classList.add("mobileone")
+            mobile.style.animation="road 3s infinite linear"
         }
          

@@ -23,8 +23,8 @@ body{
     border-radius: 50%;
 }
 .game{
-    width: 400px;
-    height: 500px;
+    min-width: 400px;
+    min-height: 500px;
     /* border: 1px solid red; */
     display: flex;
     overflow: hidden;
@@ -95,11 +95,83 @@ body{
     color: transparent;
     -webkit-background-clip: text;
  }
- @media (max-width:600px){
-    .body{
-        transform: rotate(90deg);
-    }
-    /* html{
-        transform: rotate(90deg);
-    } */
+ .alert{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    top: 40%;
+    text-align: center;
+    padding-top: 10%;
+    color: red;
+    font-size:xx-large;
+    display: none;
  }
+ @media (max-width:600px){
+     .direction{
+        display: none;
+     }
+     .game{
+        display: none;
+     }
+     .header{
+        display: none;
+     }
+     .alert{
+        display: block;
+     }
+     .start{
+        display: none;
+     }
+    .mobile{
+        min-width: 380px;
+        min-height: 800px;
+        /* border: 1px solid red; */
+        background: url(road.png);
+        background-repeat: repeat-y;
+        background-size: 100%;
+        /* animation: road 3s infinite linear; */
+    }
+    .mobile_scroe{
+        position: absolute;
+        left: 0;
+    }
+    .left_mobile,.right_mobile{
+        position: absolute;
+        top: 90%;
+    }
+    .left_mobile{
+        margin-left: 0;
+        display: none;
+    }
+    .right_mobile{
+        margin-left: 66%;
+        display: none;
+    }
+    .level_mobile{
+        color: wheat;
+        display: none;margin-left: 90%;
+    }
+    .body{
+        overflow: hidden;
+    }
+    .startmobile{
+        display: block;
+        position: absolute;
+        margin-left: 33%;
+        top: 45%;
+        background-color: rgb(10, 190, 61);
+        color: aliceblue;
+    }
+    .mobile.mobileone .startmobile,.scroe_mobile{
+        display: none;
+    }
+    .mobile.mobileone .right_mobile,.mobile.mobileone .left_mobile,.mobile.mobileone .scroe_mobile , .mobile.mobileone .level_mobile{
+        display: block;
+    }
+    .scroe_mobile{
+        position: absolute;
+    }
+ }
+
+  
