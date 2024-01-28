@@ -60,10 +60,21 @@ body{
 }
 @keyframes sai{
     0%{
-        top: 0px;
+        top: 0;
     }
     100%{
-        top: 550px;
+        top: 100vh;
+    }
+}
+@keyframes mobilesai{
+    0%{
+        top: -20%;
+    }
+    /* 50%{
+        top: 90vh;
+    } */
+    100%{
+        top: 100vh;
     }
 }
  .start{
@@ -144,11 +155,11 @@ body{
         top: 90%;
     }
     .left_mobile,.scroe_mobile{
-        margin-left: -50%;
+        margin-left: -60%;
         display: none;
     }
     .right_mobile,.level_mobile{
-        margin-left: 50%;
+        margin-left: 60%;
         display: none;
     }
     .level_mobile{
@@ -174,23 +185,46 @@ body{
     }
     .scroe_mobile{
         position: absolute;
+        color: antiquewhite;
     }
     .mobilecar{
         
         
         position: absolute;
-        width: 15%;
-        height: 70px;
-        background: red;
+        width: 10%;
+        height: 95px;
+        /* background: red; */
         border: 1px solid red;
         border-radius: 0 0 30% 30% ;
+        display: flex;
+        justify-content: center;
         /* display: none; */
         /* animation: sai 2s infinite; */
     }
     .own{
-        margin-top: 115%;
+        margin-top: 117%;
         border-radius: 30% 30% 0 0;
      }
+     .mobilecar img{
+        border-radius: 30% 30% 0 0;
+     }
+     .encar1{
+        /* animation: sai 2s infinite; */
+        left: 13%;
+     }
+     .encar2{
+        left: 30%;
+     }
+     .encar3{
+        left: 50%;
+     }
+     .encar4{
+        left: 70%;
+     }
+     .encar1,.encar2,.encar3,.encar4{
+        transform: rotate(180deg);
+     }
+ 
 
  }
 
