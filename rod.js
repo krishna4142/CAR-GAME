@@ -168,4 +168,23 @@ let clearInterval
             mobile.classList.add("mobileone")
             mobile.style.animation="road 3s infinite linear"
         }
+
+        // mobile directions 
+        let leftmo=document.querySelector(".own");
+        let rightmo=document.querySelector(".right_mobile");
+        let mobileval=11;
+        function leftmobile(){
+            mobileval=mobileval-1;
+            if(mobileval<=11){
+                mobileval=11;
+            }
+            leftmo.style.left=`${mobileval}%`;
+        }
+        function rightmobile(){
+            mobileval++;
+            if(mobileval>=72){
+                mobileval=72;
+             }
+            leftmo.style.left=`${mobileval}%`;
+        }
          
